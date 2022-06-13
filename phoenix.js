@@ -22,6 +22,48 @@ const listScreens = function() {
     }
 }
 
+const listWindows = function() {
+    // This only shows windows for spaces that are currently being displayed
+    for (const w of Window.all()) {
+        var msg = w.app().name();
+        var title = w.title();
+        if (title) {
+            msg += " - " + title;
+        }
+        console.log(msg);
+    }
+}
+
+const listApps = function() {
+    // This only shows apps for spaces that are currently being displayed
+    var msg = "\n";
+
+    for (const a of App.all()) {
+        if (a.isHidden()) {
+            continue;
+        }
+
+        var windows = a.windows();
+
+        if (windows.length === 0) {
+            continue;
+        }
+
+        msg += "--- " + a.name() + " ---\n";
+
+        for (const w of windows) {
+            var title = w.title();
+            if (title) {
+                msg += "    " + title + "\n";
+            } else {
+                msg += "    (untitled)\n";
+            }
+        }
+    }
+
+    console.log(msg);
+}
+
 const showCurrentTitle = function() {
     const window = Window.focused();
 
@@ -48,6 +90,8 @@ Key.on('\\', ['cmd'], () => {
     // showCurrentTitle();
     // listScreens();
     // listSpaces();
+    // listWindows();
+    // listApps();
+
     centerMouse();
 });
-

@@ -1,6 +1,10 @@
 
 # Installation
 
+Install [phoenix](https://github.com/kasper/phoenix):
+
+    brew install --cask phoenix
+
 Clone the repo and link it:
 
     cd ~/git

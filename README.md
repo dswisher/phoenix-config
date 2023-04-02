@@ -14,7 +14,7 @@ Clone the repo and link it:
 
 # Bindings
 
-These bindings use the `HYPER` key, which is `cmd` + `alt` + `shift` + `ctrl`.
+These bindings use the `HYPER` key, which is <kbd>cmd</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>ctrl</kbd>.
 
 | Binding                          | Action |
 | -------------------------------- | ------------------------------- |
@@ -35,4 +35,13 @@ In a console, run the following to view logs:
 
 * [jasonm23](https://github.com/jasonm23/Phoenix-config) - grid-based window management, literate programming style
 * [fabiospampinato](https://github.com/fabiospampinato/phoenix/) - window snapping, nicely structured code, thorough README
+
+
+# Hyper Key
+
+For the mappings to work, a <kbd>HYPER</kbd> key is needed.
+I am using [Hyperkey](https://hyperkey.app/), as it is simple.
+
+Another option would be [Karabiner-Elements](https://karabiner-elements.pqrs.org/), which looks quite powerful
+and is often recommended, but it is harder to set up. (It doesn't look too hard.)
 
